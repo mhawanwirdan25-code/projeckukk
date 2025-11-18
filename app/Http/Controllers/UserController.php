@@ -6,7 +6,7 @@ use App\Models\Siswa;
 use App\Models\PendidikanLanjut;
 use App\Models\Pekerjaan;
 use App\Models\Prestasi;
-use App\Models\Motivasi; // ✅ tambahkan ini
+use App\Models\Motivasi;
 
 class UserController extends Controller
 {
