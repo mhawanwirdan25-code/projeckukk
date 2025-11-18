@@ -18,9 +18,19 @@ class UserController extends Controller
 
     public function alumni()
     {
-        $siswa = Siswa::orderBy('tahun_lulus', 'desc')->get();
-        return view('user.alumni', compact('siswa'));
+        $search = request()->search;
+
+        $siswa = Siswa::when($search, function ($query) use ($search) {
+            $query->where('nama_lengkap', 'like', "%$search%")
+                ->orWhere('jurusan', 'like', "%$search%")
+                ->orWhere('tahun_lulus', 'like', "%$search%");
+        })
+        ->orderBy('tahun_lulus', 'desc')
+        ->get();
+
+        return view('user.alumni', compact('siswa', 'search'));
     }
+
 
     public function pendidikan()
     {
