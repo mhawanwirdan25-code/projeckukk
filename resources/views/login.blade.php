@@ -13,7 +13,6 @@
   <div class="login-wrapper d-flex align-items-center justify-content-center vh-100">
     <div class="login-card shadow-lg rounded-4 p-4 bg-white">
       <div class="text-center mb-4">
-        <img src="/storage/alumni.png" alt="Logo Alumni" class="logo-img mb-3">
         <h4 class="fw-bold text-primary">Login Admin</h4>
         <p class="text-muted small">Masuk untuk mengelola data alumni dan prestasi</p>
       </div>
