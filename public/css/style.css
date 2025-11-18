@@ -1,0 +1,100 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('/storage/D1.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  background: linear-gradient(135deg, #212122, #606263);
+  color: #fff;
+  padding: 20px;
+  min-height: 100vh;
+}
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+}
+.sidebar a {
+  display: block;
+  color: #cbd5e1;
+  margin: 12px 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  background: #0030b3;
+  color: #ffffff;
+  transform: translateX(5px);
+}
+.sidebar a.active {
+  background: #1c6db9;
+  color: #fff;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+}
+
+.profile-card {
+  background: linear-gradient(135deg, #0f0f0f, #1e4fd6);
+  color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+.profile-card img {
+  border: 4px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.card-custom {
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-custom:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.card-custom h6 {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+  .menu-card {
+    border-radius: 15px;
+    transition: all 0.3s ease;
+  }
+
+  .menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+
+  .alumni-card {
+    transition: all 0.3s ease;
+  }
+
+  .alumni-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
