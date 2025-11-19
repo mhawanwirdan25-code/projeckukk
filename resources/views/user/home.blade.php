@@ -49,7 +49,7 @@
                 Website ini dibuat untuk menghubungkan kembali para alumni dengan sekolah dan teman-teman lama.
                 Melalui platform ini, alumni dapat berbagi kisah inspiratif, prestasi, serta perjalanan pendidikan dan karier mereka.
             </p>
-            <ul>
+            <ul class="list-unstyled">
                 <li><i class="fa fa-book"></i> Melihat data alumni berdasarkan angkatan</li>
                 <li><i class="fa-solid fa-graduation-cap"></i> Mengetahui pendidikan & pekerjaan alumni</li>
                 <li><i class="fa-solid fa-medal"></i>  Melihat prestasi alumni yang membanggakan</li>
