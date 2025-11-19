@@ -2,7 +2,7 @@
 
 @section('content')
 <style>
-    /* 🌄 HERO SECTION */
+    /* HERO SECTION */
     .hero-section {
         position: relative;
         background: url('{{ asset("storage/sa.jpg") }}') center/cover no-repeat;
@@ -33,7 +33,7 @@
         opacity: 0.9;
     }
 
-    /* 🧩 SECTION HEADER */
+    /* SECTION HEADER */
     .section-header {
         padding: 12px 20px;
         border-radius: 8px 8px 0 0;
@@ -46,7 +46,7 @@
         justify-content: center;
     }
 
-    /* 🕓 TIMELINE */
+    /* TIMELINE */
     .timeline {
         position: relative;
         padding: 30px 0 10px 20px;
@@ -110,10 +110,10 @@
         color: #007a64;
     }
 
-    /* 🌈 DETAILS */
+    /*  DETAILS */
     .text-muted { font-size: 0.9rem; }
 
-    /* ✨ ANIMATION */
+    /*  ANIMATION */
     @keyframes fadeInUp {
         from { opacity: 0; transform: translateY(15px); }
         to { opacity: 1; transform: translateY(0); }
@@ -122,7 +122,7 @@
         animation: fadeInUp 0.6s ease forwards;
     }
 
-    /* 📱 RESPONSIVE */
+    /* RESPONSIVE */
     @media (max-width: 768px) {
         .hero-section {
             height: 45vh;

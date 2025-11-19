@@ -12,9 +12,9 @@ class AuthController extends Controller
     private function getUser() : array {
         return[
             [
-                'username'  =>  'admin',
+                'username'  =>  'adminalumni',
                 'password'  =>  '$2y$12$5PzW4cvPJC0E3G/lSEIOnOxPXn1ltfoW6dVhfMdtZQIc6ulf9oLua',
-                'nama'      =>  'Admin'
+                'nama'      =>  'Hawan'
             ],
             [
                 'username'  =>  'user',
@@ -36,7 +36,7 @@ class AuthController extends Controller
                 return redirect()->route('dashboard');
             }
         }
-        return back()->withError(['error' => 'Username atau Password salah!']);
+        return back()->withErrors(['error' => 'Username atau Password salah!']);
     }
     public function showDashboard() {
         if(!Session('user')){
@@ -45,6 +45,20 @@ class AuthController extends Controller
         $user = Session::get('user');
         return view('dashboard', compact('user'));
     }
+    public function profil()
+    {
+        // Cek apakah user sudah login
+        if (!Session::has('user')) {
+            return redirect()->route('login');
+        }
+
+        // Ambil data user dari session
+        $user = Session::get('user');
+
+        // Kirim ke view profil.blade.php
+        return view('profil', compact('user'));
+    }
+
     public function logout() {
         Session::forget('user');
         return redirect()->route('login');

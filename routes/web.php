@@ -10,12 +10,12 @@ use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\UserController;
 
 
-// 🔹 ROUTE HALAMAN USER (Tanpa login)
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('user.home');
     Route::get('/login', [AuthController::class, 'index']);
     Route::post('/login', [AuthController::class, 'login'])->name('login');
     Route::get('/dashboard', [AuthController::class, 'showDashboard'])->name('dashboard');
+    Route::get('/profil', [AuthController::class, 'profil'])->name('profil');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     // Route::get('/', [AuthController::class, 'index'])->name('home');
 
@@ -45,7 +45,7 @@ Route::prefix('admin')->group(function () {
     Route::put('/pendidikan/{id}', [PendidikanLanjutController::class, 'update'])->name('pendidikan.update');
     Route::delete('/pendidikan/{id}', [PendidikanLanjutController::class, 'destroy'])->name('pendidikan.destroy');
 
-    // 🌟 Halaman Motivasi
+    //  Halaman Motivasi
     Route::get('/motivasi', [MotivasiController::class, 'index'])->name('motivasi.index');
     Route::get('/motivasi/create', [MotivasiController::class, 'create'])->name('motivasi.create');
     Route::post('/motivasi', [MotivasiController::class, 'store'])->name('motivasi.store');
